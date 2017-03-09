@@ -3,22 +3,20 @@
 =================================*/
 
 /*----------  fonts  ----------*/
-@import 'https://fonts.googleapis.com/css?family=Cabin:400,500,700';
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
-@import 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&subset=latin-ext';
 
-$primary-font: 'Georgia', sans-serif !default;
-$heading-font: 'Roboto', sans-serif !default;
+$primary-font: 'Montserrat', sans-serif !default;
+$heading-font: 'PT Sans', sans-serif !default;
 $admin-font: 'Dosis', sans-serif !default;
 
 /*----------  colors  ----------*/
 
-$primary-color: #000022 !default;
-$secondary-color: #c7b38e !default;
+$primary-color: #fff !default;
+$secondary-color: #f2be35 !default;
+$subtitle-color: #2c2f34;
 $link-color: $primary-color !default;
-$dark-color: #1C1C1C !default;
+$dark-color: #2f373d !default;
 
-$color-text: #313131 !default;
+$color-text: #454545 !default;
 
 /*----------  base  ----------*/
 
