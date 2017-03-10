@@ -21,6 +21,12 @@
         box-shadow: 0px 19px 21px 0px rgba(0, 0, 0, 0.15);
         letter-spacing: 1px;
     }
+    &.gradient {
+        @include linear-gradient(to right, $secondary-color, #f7d783);
+        border: none;
+        box-shadow: $main-box-shadow;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
 }
-
 

@@ -9,3 +9,10 @@
     font-weight: 700;
     font-size: 3rem;
 }
+
+@mixin ivona($width, $height) {
+    width: $width;
+    height: $height;
+    background: palevioletred;
+    position: absolute;
+}
