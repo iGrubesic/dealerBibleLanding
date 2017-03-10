@@ -1,3 +1,6 @@
+section {
+    @include clearfix();
+}
 
 nav {
 
@@ -26,7 +29,7 @@ nav {
     position: relative;
 
     .intro {
-        @include position(absolute,null 0 16.8rem 0);
+        @include position(absolute,null 0 30rem 0);
         z-index: 1;
         h1 {
             color: $primary-color;
@@ -43,31 +46,166 @@ nav {
     }   
 
     .hero {
-        @include position(absolute, null 0 -4rem 0);
+        @include position(absolute, null 0 -4rem null);
         width: 100%;
         &_inner {
             @include outer-container(1170px);
             margin-top: -100px;
+            box-shadow: $main-box-shadow;
             background: url('../img/yellow.png') no-repeat center center / cover;
         }
     }   
 }
 
 .perf {
-    padding-top: 5rem;
-    .block {
+    padding-top: 10rem;
+    &_block {
         @include span-columns(6);
         @include omega();
+        width: 50%;
         height: 600px;
+        position: relative;
         &:first-child {
             background: url('../img/comp.jpg')  no-repeat center center / cover;
         }
         &:last-child {
             background: black;
         }
+
+        &_left,
+        &_right {
+            @include transform(translateY(-50%));
+            height: 30rem;
+            box-shadow: $main-box-shadow;
+            width: 70%;
+            background: white;
+            z-index: 10;
+            padding: 5rem;
+        }
+
+        &_left { @include position(absolute, 50% null null -10rem)}
+        &_right { @include position(absolute, 50% -10rem null null)}
     }
 }
 
+.bring {
+
+    background: $third-color;
+    padding-top: 10rem;
+
+    .title {
+        text-align: center;
+    }
+
+    .row {
+        @include row();
+        margin-top: 10rem;
+
+        .block {
+            @include span-columns(4);
+            background: #fff;
+            padding: 5rem;
+            box-shadow: $main-box-shadow;
+            position: relative;
+
+            h3, p {
+                text-align: center;
+            }
+
+            h3 {
+                text-transform: uppercase;
+            }
+
+            &:before {
+                @include position(absolute, -1rem 10% null null);
+                content: '';
+                width: 80%;
+                height: 1rem;
+                background: #bdc3c3;
+            }
+        }
+
+        .full {
+            margin: 10rem auto;
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            padding: 1.5rem 4rem;
+            box-shadow: $main-box-shadow;
+        }
+    }
+}
+
+.to_action {
+    height: 55rem;
+    position: relative;
+    background: url('../img/sad.jpg')  no-repeat center center / cover;
+
+    .row {
+        display: table;
+        height: 100%;
+        max-width: 50rem;
+        margin: 0 auto;
+
+        .title {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+
+    .hero {
+
+        @include position(absolute, null null -10rem null);
+        width: 100%;
+
+        &_inner {
+            @include outer-container();
+            background: #212121;
+            p {
+                padding: 5rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.call_two {
+    background: $third-color;
+    padding: 10rem 0;
+
+    .row {
+        @include row();
+
+        .block {
+            @include span-columns(6);
+
+            &_inner {
+                background: white;
+                padding: 5rem 5rem 2rem 5rem;
+                height: 30rem;
+                box-shadow: $main-box-shadow;
+                width: 90%;
+                float: right;
+                position: relative;
+                z-index: 2;
+
+                :before {
+                    @include position(absolute, -4rem);
+                    content: '';
+                    z-index: 1;
+                    width: 100%;
+                    height: 8rem;
+                    background: $secondary-color;
+                }
+            }
+        }
+    }
+}
 
 
 
