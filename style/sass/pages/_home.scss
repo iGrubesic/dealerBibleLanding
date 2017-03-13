@@ -19,14 +19,13 @@ section {
             @include outer-container();
             .row { @include row(); padding: 1rem 0;}
             .left { @include span-columns(6)}
-            .right { @include span-columns(6); padding-right: 4rem;}
+            .right { @include span-columns(6);}
         }
 
         .logo {
             color: #fff;
             font-size: 3rem;
             font-family: $primary-font;
-            padding-left: 4rem;
         }
 
         .btn {
@@ -53,17 +52,20 @@ section {
         height: 100vh;
         text-align: center;
         position: relative;
+        display: table;
         
         .intro {
-            @include position(absolute,null 0 30rem 0);
-            z-index: 1;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
             h1 {
+                max-width: 900px;
+                margin: 0 auto;
                 color: $primary-color;
                 font-weight: bold;
                 font-size: 10rem;
                 font-style: normal;
                 line-height: 1;
-                margin: 0;
                 text-align: center;
                 @include media(max-width 700px) {
                     font-size: 8rem;
@@ -72,10 +74,11 @@ section {
         }   
 
         .hero {
-            @include position(absolute, null 0 -8rem null);
+            @include position(absolute, null 0 -10rem null);
             width: 100%;
             &_inner {
                 @include outer-container();
+                max-width: $container-width;
                 padding: 4rem;
                 margin-top: -100px;
                 box-shadow: $main-box-shadow;
@@ -114,7 +117,6 @@ section {
             &_left,
             &_right {
                 @include transform(translateY(-50%));
-                height: 30rem;
                 box-shadow: $main-box-shadow;
                 width: 70%;
                 background: white;
