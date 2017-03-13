@@ -8,5 +8,17 @@
     color: $subtitle-color;
     font-weight: 700;
     font-size: 3rem;
+    position: relative;
+
+    &:before {
+        content: '';
+        height: 3px;
+        width: 89px;
+        background: $secondary-color;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-209%); 
+    }
 }
 
