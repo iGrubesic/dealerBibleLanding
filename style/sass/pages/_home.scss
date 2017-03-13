@@ -126,6 +126,10 @@ section {
 
             &_left { @include position(absolute, 50% null null -10rem)}
             &_right { @include position(absolute, 50% -10rem null null)}
+            
+            p {
+                margin-top: 5rem;
+            }
         }
 
         h2 {
@@ -142,6 +146,10 @@ section {
         h2 {
             @include subtitle();
             text-align: center;
+
+            &:before {
+                transform: translateX(-50%);
+            }
         }
 
         .row {
