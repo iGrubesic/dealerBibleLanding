@@ -24,11 +24,13 @@ section {
 
         .logo {
             color: #fff;
-            font-size: 3rem;
+            font-size: 4rem;
             font-family: $primary-font;
+            line-height: 4rem;
         }
 
         .btn {
+            width: 11rem;
             float: right;
             margin-left: 10px;
             text-transform: uppercase;
@@ -67,8 +69,9 @@ section {
                 font-style: normal;
                 line-height: 1;
                 text-align: center;
-                @include media(max-width 700px) {
-                    font-size: 8rem;
+                @include media(max-width 768px) {
+                    font-size: 7rem;
+                    line-height: 8rem;
                 }
             }
         }   
@@ -76,6 +79,11 @@ section {
         .hero {
             @include position(absolute, null 0 -10rem null);
             width: 100%;
+
+            @include media(max-width 768px) {
+                @include position(absolute, null 0 -14rem null);
+             }
+
             &_inner {
                 @include outer-container();
                 max-width: $container-width;
@@ -84,6 +92,10 @@ section {
                 box-shadow: $main-box-shadow;
                 background: url('../img/yellow.png') repeat center center / cover;
                 font-family: $heading-font;
+
+                 @include media(max-width 768px) {
+                     margin: 0 3rem;
+                 }
             }
 
             h3 {
